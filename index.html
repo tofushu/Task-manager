@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- This is the HTML file for the Task Management application -->
+<html lang="en">
+  <head>
+    <!-- Metadata for character encoding and viewport settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the page -->
+    <title>Task Management</title>
+
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Wrapper container for the entire page -->
+    <div class="wrapper">
+      <!-- Header container with the title and add task button -->
+      <div class="head-container">
+        <p>My Task:</p>
+        <!-- Title for the task list -->
+        <button id="add-button" class="add-button">Add Task</button>
+        <!-- Button to open the add task modal -->
+      </div>
+
+      <!-- Container for the task list -->
+      <div class="body-container">
+        <table>
+          <!-- Table to display the task list -->
+          <thead>
+            <tr>
+              <!-- Table header row -->
+              <th>Date</th>
+              <!-- Column for the task date -->
+              <th>Task Name</th>
+              <!-- Column for the task name -->
+              <th>Task Deadline</th>
+              <!-- Column for the task deadline -->
+              <th>Status</th>
+              <!-- Column for the task status -->
+              <th>Action</th>
+              <!-- Column for the task actions -->
+            </tr>
+          </thead>
+          <tbody class="task-display"></tbody>
+          <!-- Table body to display the task list -->
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal for adding a new task -->
+    <div id="add-modal" class="modal">
+      <div class="modal-content">
+        <!-- Close button for the modal -->
+        <span class="close">&times;</span>
+        <h2>Add Task</h2>
+        <!-- Title for the add task form -->
+        <form
+          action="addtask.php"
+          method="POST"
+          id="add"
+          onsubmit="return formSubmit();"
+        >
+          <!-- Form for adding a new task -->
+          <label for="task-name">Task Name:</label>
+          <!-- Label for the task name input field -->
+          <input
+            type="text"
+            placeholder="Enter your task here..."
+            name="task-name"
+            id="task-name"
+            class="input"
+            required
+          />
+          <!-- Input field for the task name -->
+          <br />
+          <label for="task-deadline">Task Deadline:</label>
+          <!-- Label for the task deadline input field -->
+          <input
+            type="date"
+            name="task-deadline"
+            id="task-deadline"
+            class="input"
+            required
+          />
+          <!-- Input field for the task deadline -->
+          <br />
+          <input id="submit" type="submit" />
+          <!-- Submit button for the form -->
+        </form>
+      </div>
+    </div>
+
+    <!-- Link to jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link to the JavaScript file -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Center the wrapper container */
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the head container */
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Make the title and table header cells bold */
+.head-container p,
+thead tr td {
+  font-weight: bold;
+}
+
+/* Style the add task button */
+.add-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(123, 211, 85);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Change the background color of the add task button on hover */
+.addbutton:hover {
+  background-color: rgb(123, 250, 85);
+}
+
+/* Style the table header */
+thead tr {
+  border: none;
+  background-color: rgb(217, 217, 217);
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+/* Style the table cells */
+table th,
+table td {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 15px 0 15px;
+}
+
+/* Style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style the modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* Style the submit button */
+#submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(123, 211, 85);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Change the background color of the submit button on hover */
+#submit:hover {
+  background-color: rgb(123, 250, 85);
+}
+
+/* Style the close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Change the color of the close button on hover and focus */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
