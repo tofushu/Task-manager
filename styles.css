@@ -15,21 +15,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* Style the head container */
-.head-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-/* Make the title and table header cells bold */
-.head-container p,
-thead tr td {
-  font-weight: bold;
-}
-
 /* Style the add task button */
 .add-button {
   padding: 10px 20px;
@@ -45,16 +30,6 @@ thead tr td {
   background-color: rgb(123, 250, 85);
 }
 
-/* Style the table header */
-thead tr {
-  border: none;
-  background-color: rgb(217, 217, 217);
-  display: flex;
-  flex-direction: row;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
 /* Style the table cells */
 table th,
 table td {
@@ -63,6 +38,17 @@ table td {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 15px 0 15px;
+}
+
+/* Add alternating row background colors */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray color for even rows */
+}
+
+/* Style the date table cells */
+table td {
+  width: 20%;
+  text-align: left;
 }
 
 /* Style the modal */

@@ -22,7 +22,9 @@ function formSubmit() {
     data: $("#add").serialize(), // Get the form data
     success: function (response) {
       // Display an alert message and hide the modal when the task is successfully added
-      alert("Successfully Added a task!"), $(".modal").css("display", "none");
+      alert("Successfully Added a task!"),
+        $(".modal").css("display", "none"),
+        displayTasks();
     },
   });
 
