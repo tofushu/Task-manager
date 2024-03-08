@@ -3,7 +3,7 @@
 require('connection.php');
 
 // Prepare the SQL query
-$select_query = $conn->prepare("select * from tbltask");
+$select_query = $conn->prepare("select * from tbltask order by dateCreated desc");
 
 // Execute the query
 $select_query->execute();
